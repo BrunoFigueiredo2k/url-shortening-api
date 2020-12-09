@@ -1,0 +1,7 @@
+section {
+    padding: 50px 40px;
+}
+
+.cta-section {
+    @include backgroundImageCover('/images/bg-boost-desktop.svg');
+}

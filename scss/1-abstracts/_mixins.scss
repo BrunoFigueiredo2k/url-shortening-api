@@ -1,0 +1,54 @@
+/* Mixins */
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+
+    li {
+        display: inline-block;
+
+        margin: {
+            left: -2px;
+            right: 2em;
+        }
+    }
+}
+
+.horizontal-list {
+    @include horizontal-list;
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin container($width) {
+    margin: 0 auto;
+    width: $width;
+}
+
+@mixin backgroundImageCover($img-url) {
+    background: url($img-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    @include container(87%);
+
+    @include mobile {
+        @include container(95%);
+    }
+}

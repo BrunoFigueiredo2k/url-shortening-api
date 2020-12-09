@@ -1,0 +1,15 @@
+/* Place all button components styling here */
+.cta-btn {
+    background-color: $cyan;
+    color: white;
+    font-weight: $weight-bold;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    transition: $transition-ease;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

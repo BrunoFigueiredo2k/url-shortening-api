@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    height: 100%;
+
+    .col {
+        flex: 50%;
+        position: relative;
+    }
+}

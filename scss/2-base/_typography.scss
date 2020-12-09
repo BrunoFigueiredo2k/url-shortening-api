@@ -1,0 +1,31 @@
+/**
+ * Typography
+ * =================================
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ */
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $font-poppins;
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+    margin-top: 0;
+
+    small {
+        font-weight: normal;
+    }
+}
