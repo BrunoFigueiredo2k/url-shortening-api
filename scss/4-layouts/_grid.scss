@@ -1,9 +1,22 @@
 .row {
     display: flex;
     height: 100%;
+    flex-wrap: wrap;
 
     .col {
         flex: 50%;
         position: relative;
     }
+
+    .col-4 {
+        flex: 33%;
+    }
+
+    .col-3 {
+        flex: 25%;
+    }
+}
+
+.center {
+    text-align: center;
 }

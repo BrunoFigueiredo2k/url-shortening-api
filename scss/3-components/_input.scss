@@ -2,11 +2,11 @@
 input,
 select,
 textarea {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     font-size: $base-font-size;
-    padding: 20px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: $dark-violet;
 
-    &:focus {
-        border: 1px solid rgb(199, 199, 199);
-    }
+    transition: $transition-ease;
 }

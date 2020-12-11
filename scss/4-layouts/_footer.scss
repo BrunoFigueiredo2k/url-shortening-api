@@ -2,6 +2,24 @@
 footer {
     background-color: $very-dark-violet;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 60px 0;
+
+    .footer-title-menu {
+        font-weight: $weight-bold;
+        padding: 0 0 20px 0;
+    }
+
+    .footer-ul {
+        li {
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: $grayish-violet;
+            transition: $transition-ease;
+
+            &:hover {
+                cursor: pointer;
+                color: lighten($grayish-violet, 10%);
+            }
+        }
+    }
 }

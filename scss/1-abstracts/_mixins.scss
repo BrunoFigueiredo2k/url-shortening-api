@@ -15,6 +15,10 @@
             left: -2px;
             right: 2em;
         }
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
@@ -46,7 +50,7 @@
 }
 
 .container {
-    @include container(87%);
+    @include container(80%);
 
     @include mobile {
         @include container(95%);

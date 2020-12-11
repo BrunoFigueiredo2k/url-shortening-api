@@ -4,10 +4,21 @@ header {
     color: $grayish-violet;
     font-weight: $weight-bold;
     padding: 40px 0;
+
+    .horizontal-list {
+        li {
+            transition: $transition-ease;
+
+            &:hover {
+                cursor: pointer;
+                color: $very-dark-blue;
+            }
+        }
+    }
 }
 
 .mobile-menu {
-    opacity: 0;
+    display: none;
     z-index: 9999;
     padding: 10px;
     font-weight: $weight-bold;

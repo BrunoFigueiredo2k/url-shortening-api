@@ -1,15 +1,23 @@
 /* Place all button components styling here */
-.cta-btn {
+.cta-btn,
+.btn-squared {
     background-color: $cyan;
     color: white;
     font-weight: $weight-bold;
     padding: 10px 25px;
     border-radius: 20px;
     border: none;
+    letter-spacing: 0.5px;
     transition: $transition-ease;
 
     &:hover {
         cursor: pointer;
-        opacity: 0.8;
+        background: lighten($cyan, 10%);
     }
+}
+
+.btn-squared {
+    border-radius: 5px;
+    padding: 13px 30px;
+    font-size: $base-font-size;
 }
