@@ -225,7 +225,8 @@ p {
 /* Import all components .scss files */
 /* Place all button components styling here */
 .cta-btn,
-.btn-squared {
+.btn-squared,
+.btn-copy {
   background-color: #2acfcf;
   color: white;
   font-weight: 700;
@@ -238,7 +239,8 @@ p {
 }
 
 .cta-btn:hover,
-.btn-squared:hover {
+.btn-squared:hover,
+.btn-copy:hover {
   cursor: pointer;
   background: #51dbdb;
 }
@@ -247,6 +249,39 @@ p {
   border-radius: 5px;
   padding: 13px 30px;
   font-size: 18px;
+}
+
+.btn-copy,
+.btn-copy-active {
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 30px;
+  margin-top: -4px;
+  margin-left: 15px;
+}
+
+.btn-copy-active {
+  background-color: #3b3054;
+}
+
+.btn-copy-active:hover {
+  cursor: pointer;
+  background: #241e34;
+}
+
+.clear-btn {
+  color: #9e9aa7;
+  text-decoration: underline;
+  float: right;
+  font-weight: 700;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+  display: none;
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  color: #918c9b;
 }
 
 /* Place all input components styling here */
@@ -303,6 +338,36 @@ textarea {
   margin: 250px 0 -200px 20px;
   margin-top: 250px;
   margin-bottom: -200px;
+}
+
+.card-url {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.card-url .input-url,
+.card-url .short-url {
+  font-size: 18px;
+  color: #3b3054;
+  font-weight: 700;
+}
+
+.card-url .short-url {
+  color: #2acfcf;
+  float: right;
+  text-decoration: none;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.card-url .short-url:hover {
+  cursor: pointer;
+  color: #51dbdb;
+}
+
+.card-url button {
+  float: right;
 }
 
 .illustration-landing {
@@ -435,15 +500,19 @@ section {
   color: #fff;
 }
 
-.search-bar-urls {
+.container-shorten {
+  margin-top: -110px;
+  margin-bottom: 110px;
+}
+
+.container-shorten .search-bar-urls {
   border-radius: 5px;
   background: url("/images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #35323e;
   padding: 40px;
-  margin-top: -110px;
-  margin-bottom: 110px;
+  margin-bottom: 30px;
 }
 
 .stats-section {

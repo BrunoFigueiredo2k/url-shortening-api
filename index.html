@@ -59,12 +59,22 @@
 
   <section class="stats-section">
     <div class="container">
-      <div class="search-bar-urls">
-        <input type="text" class="input-field" placeholder="Shorten a link here.." id="link-input"
-          style="width: 80%; margin-right: 2%;">
-        <button class="btn-squared" id="btn-shorten">Shorten It!</button><br>
-        <p class="error-msg" id="error-msg-link">Please add a link</p>
+
+      <div class="container-shorten">
+        <div class="search-bar-urls">
+          <input type="text" class="input-field" placeholder="Shorten a link here.." id="link-input"
+            style="width: 80%; margin-right: 2%;">
+          <button class="btn-squared" id="btn-shorten">Shorten It!</button><br>
+          <p class="error-msg" id="error-msg-link">Please add a link</p>
+        </div>
+
+        <!-- Insert urls dynamically -->
+        <div class="container-urls">
+          <div id="urls-container"></div>
+          <span id="clear-urls" class="clear-btn">Clear items</span>
+        </div>
       </div>
+
       <div class="center">
         <h2 class="section-title">Advanced Statistics</h2>
         <p>Track how your links are performing across the web with <br> our

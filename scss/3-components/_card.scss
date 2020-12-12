@@ -39,3 +39,32 @@
     margin-top: 250px;
     margin-bottom: -200px;
 }
+
+.card-url {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+
+    .input-url,
+    .short-url {
+        font-size: $base-font-size;
+        color: $dark-violet;
+        font-weight: $weight-bold;
+    }
+
+    .short-url {
+        color: $cyan;
+        float: right;
+        text-decoration: none;
+        transition: $transition-ease;
+
+        &:hover {
+            cursor: pointer;
+            color: lighten($cyan, 10%);
+        }
+    }
+
+    button {
+        float: right;
+    }
+}

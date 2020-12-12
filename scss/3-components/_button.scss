@@ -1,6 +1,7 @@
 /* Place all button components styling here */
 .cta-btn,
-.btn-squared {
+.btn-squared,
+.btn-copy {
     background-color: $cyan;
     color: white;
     font-weight: $weight-bold;
@@ -20,4 +21,36 @@
     border-radius: 5px;
     padding: 13px 30px;
     font-size: $base-font-size;
+}
+
+.btn-copy,
+.btn-copy-active {
+    border-radius: 5px;
+    font-size: #{$base-font-size - 4px};
+    padding: 8px 30px;
+    margin-top: -4px;
+    margin-left: 15px;
+}
+
+.btn-copy-active {
+    background-color: $dark-violet;
+
+    &:hover {
+        cursor: pointer;
+        background: darken($dark-violet, 10%);
+    }
+}
+
+.clear-btn {
+    color: $grayish-violet;
+    text-decoration: underline;
+    float: right;
+    font-weight: $weight-bold;
+    transition: $transition-ease;
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+        color: darken($grayish-violet, 5%);
+    }
 }
