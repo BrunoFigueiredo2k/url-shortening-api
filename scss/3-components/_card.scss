@@ -6,6 +6,10 @@
         background-color: #fff;
         border-radius: 5px;
         min-height: 275px;
+
+        @include mobile {
+            min-height: 0px;
+        }
     }
 
     &-icon {
@@ -31,6 +35,14 @@
     margin-top: 100px;
 }
 
+#card-1,
+#card-2,
+#card-3 {
+    @include mobile {
+        margin-top: 60px;
+    }
+}
+
 .line-through-cards {
     height: 10px;
     background-color: $cyan;
@@ -38,6 +50,10 @@
     margin: 250px 0 -200px 20px;
     margin-top: 250px;
     margin-bottom: -200px;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .card-url {

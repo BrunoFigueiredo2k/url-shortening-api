@@ -119,6 +119,12 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 767px) {
+  body {
+    text-align: center;
+  }
+}
+
 ol,
 ul {
   list-style: none;
@@ -251,6 +257,13 @@ p {
   font-size: 18px;
 }
 
+@media (max-width: 767px) {
+  .btn-squared {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
 .btn-copy,
 .btn-copy-active {
   border-radius: 5px;
@@ -297,6 +310,14 @@ textarea {
   transition: 200ms ease;
 }
 
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    width: 100% !important;
+  }
+}
+
 /* Place all modal/popup components styling here */
 .card {
   padding: 10px;
@@ -307,6 +328,12 @@ textarea {
   background-color: #fff;
   border-radius: 5px;
   min-height: 275px;
+}
+
+@media (max-width: 767px) {
+  .card-content {
+    min-height: 0px;
+  }
 }
 
 .card-icon {
@@ -331,6 +358,14 @@ textarea {
   margin-top: 100px;
 }
 
+@media (max-width: 767px) {
+  #card-1,
+  #card-2,
+  #card-3 {
+    margin-top: 60px;
+  }
+}
+
 .line-through-cards {
   height: 10px;
   background-color: #2acfcf;
@@ -338,6 +373,12 @@ textarea {
   margin: 250px 0 -200px 20px;
   margin-top: 250px;
   margin-bottom: -200px;
+}
+
+@media (max-width: 767px) {
+  .line-through-cards {
+    display: none;
+  }
 }
 
 .card-url {
@@ -385,9 +426,24 @@ footer {
   padding: 60px 0;
 }
 
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  footer .footer-logo {
+    margin-bottom: 40px;
+  }
+}
+
 footer .footer-title-menu {
   font-weight: 700;
   padding: 0 0 20px 0;
+}
+
+@media (max-width: 767px) {
+  footer .footer-ul {
+    margin-bottom: 40px;
+  }
 }
 
 footer .footer-ul li {
@@ -458,6 +514,15 @@ header .horizontal-list li:hover {
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .row .col {

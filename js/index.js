@@ -41,8 +41,6 @@ function getShortUrl(){
 
         if (request.status >= 200 && request.status < 400) {
             var shortLink = data.result.full_short_link;
-            console.log(shortLink)
-            console.log(data.result.full_short_link);
         } else {
             console.log('error');
         }
@@ -73,7 +71,6 @@ function displayShortLink(shortLink){
 
     copyBtns.forEach(element => {
         element.addEventListener('click', () => {
-            console.log('clicked')
             element.innerHTML = copiedTxt;
             element.classList.add(btnActiveClass);
             copyToClipboard(shortLink);

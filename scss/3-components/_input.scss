@@ -9,4 +9,8 @@ textarea {
     color: $dark-violet;
 
     transition: $transition-ease;
+
+    @include mobile {
+        width: 100% !important;
+    }
 }

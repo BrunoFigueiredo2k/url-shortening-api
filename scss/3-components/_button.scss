@@ -21,6 +21,11 @@
     border-radius: 5px;
     padding: 13px 30px;
     font-size: $base-font-size;
+
+    @include mobile {
+        margin-top: 15px;
+        width: 100%;
+    }
 }
 
 .btn-copy,
