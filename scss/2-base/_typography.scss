@@ -53,6 +53,12 @@ p {
     margin-bottom: 20px;
 }
 
+.error-msg {
+    display: none;
+    margin: 10px 0 0 0;
+    color: $red;
+}
+
 ::selection {
     background-color: $cyan;
     color: white;

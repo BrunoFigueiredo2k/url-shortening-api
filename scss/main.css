@@ -206,6 +206,12 @@ p {
   margin-bottom: 20px;
 }
 
+.error-msg {
+  display: none;
+  margin: 10px 0 0 0;
+  color: #f46262;
+}
+
 ::-moz-selection {
   background-color: #2acfcf;
   color: white;
@@ -435,7 +441,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #35323e;
-  padding: 30px;
+  padding: 40px;
   margin-top: -110px;
   margin-bottom: 110px;
 }
