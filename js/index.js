@@ -1,4 +1,6 @@
 const COLOR_RED = 'hsl(0, 87%, 67%)';
+const errorEmpty = 'Please add a link';
+const errorInvalid = 'Invalid URL, try again with valid one!';
 
 // get all elements
 const errorMsg = document.getElementById('error-msg-link');
@@ -11,27 +13,36 @@ submitBtn.addEventListener('click', () =>{
         // API GET request (getting short url)
         getShortUrl();
     } else {
-        console.log('Input validation status: ' + false);
+        console.log('error');
     }
 })
 
 // Function to validate input and give error messages
 function validateInput(){
     if (input.value.trim() == ""){
+        toggleValidation(input, errorMsg, true);
+        errorMsg.innerHTML = errorEmpty;
+        return false;
+    } else {
+        toggleValidation(input, errorMsg, false);
+        return true;
+    }
+}
+
+// Toggle validation on input field, if input incorrect show red border and text
+function toggleValidation(input, errorMsg, isError){
+    if (isError){
         input.style.border = `3px solid ${COLOR_RED}`;
         errorMsg.style.display = 'inline-block';
-        return false;
     } else {
         input.style.border = '2px solid #ccc';
         errorMsg.style.display = 'none';
-        return true;
     }
 }
 
 /* API call */ 
 function getShortUrl(){
     const baseUrl = "https://api.shrtco.de/v2/shorten?url=";
-
     var request = new XMLHttpRequest();
 
     request.open('GET', `${baseUrl + input.value}`, true);
@@ -41,13 +52,14 @@ function getShortUrl(){
 
         if (request.status >= 200 && request.status < 400) {
             var shortLink = data.result.full_short_link;
+            // Call function to display shortlink to user
+            displayShortLink(shortLink);
         } else {
-            console.log('error');
+            toggleValidation(input, errorMsg, true);
+            errorMsg.innerHTML = errorInvalid;
         }
-
-        // Call function to display shortlink to user
-        displayShortLink(shortLink);
     }
+
     request.send();
 }
 
@@ -110,21 +122,21 @@ var btnSrc = document.getElementById('mobile-btn').src;
 mobileBtn.addEventListener('click', () => {
     if (btnSrc == HAMBURGER_ICON_SRC){
         mobileMenuActive(true);
-        mobileMenu.style.transform = 'scaleY(1)';
+        mobileMenu.style.display = 'inline-block';
 
         // Onclick outside hide again
         event.stopPropagation();
         window.onclick = function(e) {
             if(e.target != mobileMenu) {
                 mobileMenuActive(false);
-                mobileMenu.style.transform = 'scaleY(0)';
+                mobileMenu.style.display = 'none';
             } else {
-                mobileMenu.style.transform = 'scaleY(1)';
+                mobileMenu.style.display = 'inline-block';
             }
         }    
     } else {
         mobileMenuActive(false);
-        mobileMenu.style.transform = 'scaleY(0)';
+        mobileMenu.style.display = 'none';
     }
 });
 

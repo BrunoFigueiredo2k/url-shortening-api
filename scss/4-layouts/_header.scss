@@ -51,17 +51,6 @@ header {
     }
 }
 
-.expandable {
-    overflow: hidden;
-    transition: all .3s ease-in-out;
-    transform-origin: left top;
-    transform: scaleY(0);
-
-    &:target {
-        transform: scaleY(1);
-    }
-}
-
 .mobile-menu {
     font-size: $base-font-size;
     z-index: 9999;
@@ -75,6 +64,7 @@ header {
     margin-top: 20px;
     position: absolute;
     left: 5%;
+    display: none;
 
     li {
         color: white;

@@ -549,21 +549,6 @@ header .horizontal-list #mobile-right {
   }
 }
 
-.expandable {
-  overflow: hidden;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-}
-
-.expandable:target {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
-
 .mobile-menu {
   font-size: 18px;
   z-index: 9999;
@@ -578,6 +563,7 @@ header .horizontal-list #mobile-right {
   margin-top: 20px;
   position: absolute;
   left: 5%;
+  display: none;
 }
 
 .mobile-menu li {
