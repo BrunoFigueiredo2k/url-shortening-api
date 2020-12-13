@@ -18,20 +18,25 @@
   <header>
     <div class="container">
       <ul class="horizontal-list">
-        <li><img src="/images/logo.svg" alt="logo Shortly"></li>
+        <li class="logo-header"><img src="/images/logo.svg" alt="logo Shortly"></li>
         <li>Features</li>
         <li>Pricing</li>
         <li>Resources</li>
-        <div style="float: right;">
+        <div class="right">
           <li>Login</li>
           <li><button class="cta-btn">Sign Up</button></li>
+        </div>
+
+        <div class="right" id="mobile-right">
+          <a href="#mobile-menu-li">
+            <img src="/images/icon-hamburger.svg" id="mobile-btn">
+          </a>
         </div>
       </ul>
     </div>
   </header>
 
-
-  <ul class="mobile-menu" id="mobile-menu-li">
+  <ul class="mobile-menu expandable" id="mobile-menu-li">
     <li>Features</li>
     <li>Pricing</li>
     <li>Resources</li>

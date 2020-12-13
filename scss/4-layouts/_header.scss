@@ -13,24 +13,68 @@ header {
                 cursor: pointer;
                 color: $very-dark-blue;
             }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            @include container(90%);
+
+            .logo-header {
+                display: inline-block;
+                float: left;
+            }
+        }
+
+        .right {
+            float: right;
+        }
+
+        #mobile-right {
+            display: none;
+
+            @include mobile {
+                display: inline-block;
+
+                #mobile-btn {
+                    color: $gray;
+                    height: 17px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }
 
+.expandable {
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+
+    &:target {
+        transform: scaleY(1);
+    }
+}
+
 .mobile-menu {
-    display: none;
+    font-size: $base-font-size;
     z-index: 9999;
-    padding: 10px;
+    padding: 15px 25px 15px 25px;
     font-weight: $weight-bold;
     text-align: center;
     background-color: $dark-violet;
     z-index: 9999;
-    border-radius: 5px;
+    border-radius: 10px;
     @include container(90%);
     margin-top: 20px;
     position: absolute;
     left: 5%;
-    transition: $transition-ease;
 
     li {
         color: white;
@@ -40,6 +84,15 @@ header {
         &:hover {
             color: $cyan;
             cursor: pointer;
+        }
+    }
+
+    .bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        button {
+            width: 100%;
+            font-size: $base-font-size;
         }
     }
 }

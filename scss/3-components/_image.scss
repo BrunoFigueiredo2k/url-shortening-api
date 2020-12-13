@@ -3,4 +3,9 @@
     float: right;
     margin-top: -50px;
     margin-right: -200px;
+
+    @include mobile {
+        margin-top: -700px;
+        height: 420px;
+    }
 }

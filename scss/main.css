@@ -38,6 +38,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -192,12 +193,22 @@ h6 small {
 .title-hero {
   font-size: 64px;
   font-weight: 700;
+  line-height: 1.3em;
+  color: #35323e;
+}
+
+@media (max-width: 767px) {
+  .title-hero {
+    padding-top: 50vh;
+    font-size: 46px;
+  }
 }
 
 .section-title {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #35323e;
 }
 
 .section-title-cta {
@@ -210,6 +221,7 @@ p {
   color: #9e9aa7;
   line-height: 1.7em;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .error-msg {
@@ -236,8 +248,8 @@ p {
   background-color: #2acfcf;
   color: white;
   font-weight: 700;
-  padding: 10px 25px;
-  border-radius: 20px;
+  padding: 10px 35px;
+  border-radius: 25px;
   border: none;
   letter-spacing: 0.5px;
   -webkit-transition: 200ms ease;
@@ -249,6 +261,14 @@ p {
 .btn-copy:hover {
   cursor: pointer;
   background: #51dbdb;
+}
+
+@media (max-width: 767px) {
+  .cta-btn,
+  .btn-squared,
+  .btn-copy {
+    font-size: 18px;
+  }
 }
 
 .btn-squared {
@@ -271,6 +291,13 @@ p {
   padding: 8px 30px;
   margin-top: -4px;
   margin-left: 15px;
+}
+
+@media (max-width: 767px) {
+  .btn-copy,
+  .btn-copy-active {
+    width: 100%;
+  }
 }
 
 .btn-copy-active {
@@ -418,6 +445,13 @@ textarea {
   margin-right: -200px;
 }
 
+@media (max-width: 767px) {
+  .illustration-landing {
+    margin-top: -700px;
+    height: 420px;
+  }
+}
+
 /* Import all layouts .scss files */
 /* Footer component */
 footer {
@@ -477,22 +511,73 @@ header .horizontal-list li:hover {
   color: #35323e;
 }
 
-.mobile-menu {
+@media (max-width: 767px) {
+  header .horizontal-list li {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header .horizontal-list {
+    margin: 0 auto;
+    width: 90%;
+  }
+  header .horizontal-list .logo-header {
+    display: inline-block;
+    float: left;
+  }
+}
+
+header .horizontal-list .right {
+  float: right;
+}
+
+header .horizontal-list #mobile-right {
   display: none;
+}
+
+@media (max-width: 767px) {
+  header .horizontal-list #mobile-right {
+    display: inline-block;
+  }
+  header .horizontal-list #mobile-right #mobile-btn {
+    color: #bfbfbf;
+    height: 17px;
+  }
+  header .horizontal-list #mobile-right #mobile-btn:hover {
+    cursor: pointer;
+  }
+}
+
+.expandable {
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.expandable:target {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.mobile-menu {
+  font-size: 18px;
   z-index: 9999;
-  padding: 10px;
+  padding: 15px 25px 15px 25px;
   font-weight: 700;
   text-align: center;
   background-color: #3b3054;
   z-index: 9999;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0 auto;
   width: 90%;
   margin-top: 20px;
   position: absolute;
   left: 5%;
-  -webkit-transition: 200ms ease;
-  transition: 200ms ease;
 }
 
 .mobile-menu li {
@@ -505,6 +590,15 @@ header .horizontal-list li:hover {
 .mobile-menu li:hover {
   color: #2acfcf;
   cursor: pointer;
+}
+
+.mobile-menu .bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu .bottom button {
+  width: 100%;
+  font-size: 18px;
 }
 
 .row {
