@@ -117,7 +117,6 @@ main {
 body {
   line-height: 1;
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
@@ -152,6 +151,10 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 /**
@@ -443,6 +446,7 @@ textarea {
   float: right;
   margin-top: -50px;
   margin-right: -200px;
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
